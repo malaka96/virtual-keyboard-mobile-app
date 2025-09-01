@@ -1,14 +1,16 @@
 using UnityEngine;
-using UnityEngine.UI; // For UI
+using UnityEngine.UI;
 using TMPro;
 using System.Net.Sockets;
 using System.Text;
+using System.Net;
 
 public class NetworkManager : MonoBehaviour
 {
     [Header("UI Elements")]
     public TMP_InputField ipInputField;
     public Button connectButton;
+    public Button disconnectButton; // New button
     public TMP_Text statusText;
 
     [Header("Network Settings")]
@@ -26,20 +28,34 @@ public class NetworkManager : MonoBehaviour
         ipInputField.text = serverIP;
 
         connectButton.onClick.AddListener(OnConnectClicked);
+        disconnectButton.onClick.AddListener(OnDisconnectClicked); // Hook up disconnect
     }
 
     void OnConnectClicked()
     {
         serverIP = ipInputField.text.Trim();
-        if (string.IsNullOrEmpty(serverIP))
+
+        // Validate IP format
+        if (!IPAddress.TryParse(serverIP, out _))
         {
-            statusText.text = "Invalid IP!";
+            statusText.text = "Invalid IP format!";
             return;
         }
 
-        // Save IP for future use
         PlayerPrefs.SetString("PC_IP", serverIP);
         statusText.text = "Connected to " + serverIP;
+    }
+
+    void OnDisconnectClicked()
+    {
+        serverIP = "";
+        //PlayerPrefs.DeleteKey("PC_IP");
+        statusText.text = "Disconnected";
+        //ipInputField.text = "";
+
+        // Optional: close and reopen client to reset state
+        client.Close();
+        client = new UdpClient();
     }
 
     public void SendMessageToPC(string message)
