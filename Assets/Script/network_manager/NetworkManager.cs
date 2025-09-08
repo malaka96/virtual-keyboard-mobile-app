@@ -58,22 +58,45 @@ public class NetworkManager : MonoBehaviour
         client = new UdpClient();
     }
 
+    //public void SendMessageToPC(string message)
+    //{
+    //    Debug.Log(message);
+
+    //    if (string.IsNullOrEmpty(serverIP)) return;
+
+    //    try
+    //    {
+    //        byte[] data = Encoding.UTF8.GetBytes(message);
+    //        client.Send(data, data.Length, serverIP, port);
+    //    }
+    //    catch
+    //    {
+    //        statusText.text = "Failed to send!";
+    //    }
+    //}
+
     public void SendMessageToPC(string message)
     {
         Debug.Log(message);
-
         if (string.IsNullOrEmpty(serverIP)) return;
 
-        try
+        byte[] data = Encoding.UTF8.GetBytes(message);
+
+        // Send on background thread to avoid blocking UI
+        System.Threading.ThreadPool.QueueUserWorkItem(_ =>
         {
-            byte[] data = Encoding.UTF8.GetBytes(message);
-            client.Send(data, data.Length, serverIP, port);
-        }
-        catch
-        {
-            statusText.text = "Failed to send!";
-        }
+            try
+            {
+                client.Send(data, data.Length, serverIP, port);
+            }
+            catch
+            {
+                statusText.text = "Failed to send!";
+                // Optional: log error or update statusText via main thread
+            }
+        });
     }
+
 
     private void OnApplicationQuit()
     {
