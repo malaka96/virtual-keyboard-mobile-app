@@ -7,18 +7,14 @@ public class UIDraggable : MonoBehaviour, IPointerDownHandler, IDragHandler
     private Canvas canvas;
     private ButtonKey buttonKey;
 
-    public bool isDraggable = true; // Toggle this externally
+    private bool isDraggable = false; // Toggle this externally
+
 
     void Awake()
     {
         rectTransform = GetComponent<RectTransform>();
         canvas = GetComponentInParent<Canvas>();
         buttonKey = GetComponent<ButtonKey>();
-    }
-
-    private void Update()
-    {
-        buttonKey.enabled = !isDraggable;
     }
 
     public void OnPointerDown(PointerEventData eventData)
@@ -32,5 +28,11 @@ public class UIDraggable : MonoBehaviour, IPointerDownHandler, IDragHandler
         buttonKey.enabled = false;
         if (!isDraggable || canvas == null) return;
         rectTransform.anchoredPosition += eventData.delta / canvas.scaleFactor;
+    }
+
+    public void IsDraggable(bool newState)
+    {
+        isDraggable = newState;
+        buttonKey.enabled = !newState;
     }
 }

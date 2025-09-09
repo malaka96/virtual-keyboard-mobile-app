@@ -539,7 +539,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d3dfd1b527b27f4592f1eaabe342269, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isDraggable: 1
 --- !u!1 &184920055
 GameObject:
   m_ObjectHideFlags: 0
@@ -809,7 +808,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d3dfd1b527b27f4592f1eaabe342269, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isDraggable: 1
 --- !u!1 &215249768
 GameObject:
   m_ObjectHideFlags: 0
@@ -958,7 +956,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d3dfd1b527b27f4592f1eaabe342269, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isDraggable: 1
 --- !u!1 &241123057
 GameObject:
   m_ObjectHideFlags: 0
@@ -1107,7 +1104,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d3dfd1b527b27f4592f1eaabe342269, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isDraggable: 1
 --- !u!1 &271105717
 GameObject:
   m_ObjectHideFlags: 0
@@ -1191,10 +1187,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2127710869}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 1539715658}
+        m_TargetAssemblyTypeName: UiManager, Assembly-CSharp
+        m_MethodName: CloseSettingPanel
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1606,7 +1602,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d3dfd1b527b27f4592f1eaabe342269, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isDraggable: 1
 --- !u!1 &353602873
 GameObject:
   m_ObjectHideFlags: 0
@@ -1891,7 +1886,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d3dfd1b527b27f4592f1eaabe342269, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isDraggable: 1
 --- !u!1 &423627966
 GameObject:
   m_ObjectHideFlags: 0
@@ -3251,17 +3245,17 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2127710869}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 1539715658}
+        m_TargetAssemblyTypeName: UiManager, Assembly-CSharp
+        m_MethodName: OpenSettingPanel
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 1
+          m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &829594064
 MonoBehaviour:
@@ -3721,7 +3715,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d3dfd1b527b27f4592f1eaabe342269, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isDraggable: 1
 --- !u!1 &887838094
 GameObject:
   m_ObjectHideFlags: 0
@@ -4277,7 +4270,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d3dfd1b527b27f4592f1eaabe342269, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isDraggable: 1
 --- !u!1 &965254995
 GameObject:
   m_ObjectHideFlags: 0
@@ -4641,7 +4633,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d3dfd1b527b27f4592f1eaabe342269, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isDraggable: 1
 --- !u!1001 &1064304625
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4912,7 +4903,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d3dfd1b527b27f4592f1eaabe342269, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isDraggable: 1
 --- !u!1 &1193891100
 GameObject:
   m_ObjectHideFlags: 0
@@ -5870,7 +5860,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d3dfd1b527b27f4592f1eaabe342269, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isDraggable: 1
 --- !u!1 &1353638142
 GameObject:
   m_ObjectHideFlags: 0
@@ -6019,7 +6008,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d3dfd1b527b27f4592f1eaabe342269, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isDraggable: 1
 --- !u!1 &1408315279
 GameObject:
   m_ObjectHideFlags: 0
@@ -6033,6 +6021,7 @@ GameObject:
   - component: {fileID: 1408315282}
   - component: {fileID: 1408315281}
   - component: {fileID: 1408315284}
+  - component: {fileID: 1408315285}
   m_Layer: 5
   m_Name: Esc
   m_TagString: Untagged
@@ -6155,6 +6144,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   keyToSend: Space
+--- !u!114 &1408315285
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1408315279}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d3dfd1b527b27f4592f1eaabe342269, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1412448348
 GameObject:
   m_ObjectHideFlags: 0
@@ -6575,7 +6576,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d3dfd1b527b27f4592f1eaabe342269, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isDraggable: 1
 --- !u!1 &1470466191
 GameObject:
   m_ObjectHideFlags: 0
@@ -7134,7 +7134,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d3dfd1b527b27f4592f1eaabe342269, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isDraggable: 1
 --- !u!1 &1539715652
 GameObject:
   m_ObjectHideFlags: 0
@@ -7147,6 +7146,7 @@ GameObject:
   - component: {fileID: 1539715653}
   - component: {fileID: 1539715655}
   - component: {fileID: 1539715656}
+  - component: {fileID: 1539715658}
   - component: {fileID: 1539715657}
   m_Layer: 0
   m_Name: Manager
@@ -7237,6 +7237,33 @@ MonoBehaviour:
   - {fileID: 178679612}
   - {fileID: 928412256}
   - {fileID: 1950184173}
+  - {fileID: 188027369}
+  - {fileID: 1090047896}
+  - {fileID: 2015503878}
+  - {fileID: 241123063}
+  - {fileID: 1461584661}
+  - {fileID: 377113122}
+  - {fileID: 215249774}
+  - {fileID: 1353638148}
+  - {fileID: 881617875}
+  - {fileID: 1338684231}
+  - {fileID: 1936958722}
+  - {fileID: 350272866}
+  - {fileID: 1053848200}
+  - {fileID: 1408315285}
+--- !u!114 &1539715658
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1539715652}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3638be92d3657c348b15aa365fbaaf05, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  settingPanelTransform: {fileID: 2127710870}
 --- !u!1 &1555094459
 GameObject:
   m_ObjectHideFlags: 0
@@ -7521,7 +7548,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d3dfd1b527b27f4592f1eaabe342269, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isDraggable: 1
 --- !u!1 &1594052756
 GameObject:
   m_ObjectHideFlags: 0
@@ -8371,7 +8397,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d3dfd1b527b27f4592f1eaabe342269, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isDraggable: 1
 --- !u!1 &1869256337
 GameObject:
   m_ObjectHideFlags: 0
@@ -8869,7 +8894,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d3dfd1b527b27f4592f1eaabe342269, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isDraggable: 1
 --- !u!1 &1950184167
 GameObject:
   m_ObjectHideFlags: 0
@@ -9018,7 +9042,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d3dfd1b527b27f4592f1eaabe342269, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isDraggable: 1
 --- !u!1 &1956621236
 GameObject:
   m_ObjectHideFlags: 0
@@ -9303,7 +9326,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d3dfd1b527b27f4592f1eaabe342269, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isDraggable: 1
 --- !u!1 &2008812232
 GameObject:
   m_ObjectHideFlags: 0
@@ -9588,7 +9610,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d3dfd1b527b27f4592f1eaabe342269, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isDraggable: 1
 --- !u!1 &2027179161
 GameObject:
   m_ObjectHideFlags: 0

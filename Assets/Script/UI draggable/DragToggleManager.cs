@@ -15,7 +15,7 @@ public class DragToggleManager : MonoBehaviour
     {
         foreach (var element in draggableElements)
         {
-            element.isDraggable = isOn;
+            element.IsDraggable(isOn);
         }
     }
 }
